@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Athens Attractions project</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:100,300">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 text-center">
+          <h1><b>Explore some of Athens' great attractions</b></h1>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-2">
+          <div class="text-right">
+            <input class="search-box" placeholder="Filter Locations" data-bind="textInput: query, valueUpdate: 'afterkeydown'" />
+          </div>
+          <div class="text-left">
+            <ul  data-bind="foreach: filteredList">
+              <li data-bind="text: name, click: openInfoWindow"></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-10">
+          <div id="map"></div>
+        </div>
+      </div>
+    </div>
+
+    <script src='js/knockout-3.4.2.js'></script>
+    <script src='js/jquery-3.2.1.min.js'></script>
+    <script src='js/app.js'></script>
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBkzJaNd_tiYI2DjDlEUTX3au7nCwBucJM&v=3&callback=initMap">
+    </script>
+
+  </body>
+</html>
