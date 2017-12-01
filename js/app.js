@@ -50,7 +50,7 @@ var Location = function(data) {
 
 	this.visible = ko.observable(true);
 
-	this.wikiUrl = 'http://en.wikipedia.org/w/api.php?action=opensearch&search=' + this.name + '&format=json&callback=wikiCallback';
+	this.wikiUrl = 'https://en.wikipedia.org/w/api.php?action=opensearch&search=' + this.name + '&format=json&callback=wikiCallback';
 
 	jQuery.ajax({
 		url: this.wikiUrl,
@@ -63,7 +63,7 @@ var Location = function(data) {
 
 		for (var i = 0; i < 1; i++) {
 			articleStr = articleList[i];
-			var url = 'http://en.wikipedia.org/wiki/' + articleStr;
+			var url = 'https://en.wikipedia.org/wiki/' + articleStr;
 			content +='<li><a href="' + url + '">' + articleStr + '</a></li>';
 			self.wikiContent = content
 		}
