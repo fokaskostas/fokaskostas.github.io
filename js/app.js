@@ -154,4 +154,6 @@ function initMap() {
 	ko.applyBindings(new ViewModel());
 }
 
-///AIzaSyAQoO7bkXI4f6x8BLKUOJmPeDl0VwCwGbs///
+function googleError() {
+	alert("Google Maps did not load. Please try again.");
+}
