@@ -64,7 +64,7 @@ var Location = function(data) {
 		for (var i = 0; i < 1; i++) {
 			articleStr = articleList[i];
 			var url = 'https://en.wikipedia.org/wiki/' + articleStr;
-			content +='<li><a href="' + url + '">' + articleStr + '</a></li>';
+			content +='<li><a href="' + url + '" target="_blank">' + articleStr + '</a></li>';
 			self.wikiContent = content
 		}
 	})
